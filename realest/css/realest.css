@@ -2350,6 +2350,12 @@ font-size: 4.5vw;
   }
 }
 
+@media (max-width:480px) {
+  #footer{
+    padding: 5vw 0 9vw 5vw;
+  }
+}
+
 #footer-contact, #footer-grow, #footer-navigate{
   width:auto;
   box-sizing:border-box;
@@ -2443,10 +2449,16 @@ font-size: 4.5vw;
   }
 }
 
+@media (max-width:480px) {
+  #footer a, #footer p{
+    font-size: 4.7vw;
+  }
+}
+
 @media (max-width:320px) {
   #footer a, #footer p{
-    font-size: 5vw;
-    line-height: 8vw;
+    font-size: 6vw;
+    line-height: 10vw;
   }
 }
 
@@ -3536,14 +3548,14 @@ font-size: 4.5vw;
 @media (max-width: 768px){
   #product_section_1_right{
     width: 100%;
-    padding: 0 4vw 10vw 4vw;
+    padding: 0 5vw 10vw 5vw;
   }
 }
 
-@media (max-width: 600px){
+@media (max-width: 480px){
   #product_section_1_right{
     width: 100%;
-    padding: 0 11vw 10vw 11vw;
+    padding: 0 4vw 10vw 4vw;
   }
 }
 
@@ -3589,6 +3601,13 @@ font-size: 4.5vw;
   }
 }
 
+@media (max-width:480px) {
+  #product-name{
+    font-size: 8.5vw;
+    line-height: 11vw;
+  }
+}
+
 @media (max-width:768px) {
   #product-name h1{
     margin-block-start: 0vw;
@@ -3618,6 +3637,13 @@ font-size: 4.5vw;
   #product-price{
     font-size: 8vw;
     line-height: 10vw;
+  }
+}
+
+@media (max-width:480px) {
+  #product-price{
+    font-size: 8.5vw;
+    line-height: 11vw;
   }
 }
 
@@ -3656,6 +3682,12 @@ font-size: 4.5vw;
   }
 }
 
+@media (max-width:480px) {
+  .buying-options-label{
+    font-size: 8vw;
+  }
+}
+
 .buying-options-label p{
   margin-block-start: 0;
   margin-block-end: 0;
@@ -3671,6 +3703,13 @@ font-size: 4.5vw;
 @media (max-width:600px) {
   .buying-options-label p{
     margin-top: 11vw;
+    margin-bottom: 3vw;
+  }
+}
+
+@media (max-width:320px) {
+  .buying-options-label p{
+    margin-top: 15vw;
     margin-bottom: 3vw;
   }
 }
@@ -3710,6 +3749,13 @@ font-size: 4.5vw;
 @media (max-width:600px) {
   #color-buttons button{
     padding: 3.3vw;
+    margin-right: 0.8vw;
+  }
+}
+
+@media (max-width:480px) {
+  #color-buttons button{
+    padding: 4vw;
     margin-right: 0.8vw;
   }
 }
@@ -3796,10 +3842,20 @@ font-size: 4.5vw;
 
 @media (max-width:600px) {
   .size-btn{
-    padding: 1.3vw;
+    padding: 1.1vw;
     font-size: 4.5vw;
     height: 7.5vw;
     width: 7.5vw;
+    margin-right: 0.8vw;
+  }
+}
+
+@media (max-width:480px) {
+  .size-btn{
+    padding: 1.18vw;
+    font-size: 5.7vw;
+    height: 9vw;
+    width: 9vw;
     margin-right: 0.8vw;
   }
 }
@@ -3835,6 +3891,15 @@ font-size: 4.5vw;
   #btn-cart{
     font-size: 5vw;
     padding: 1.1vw 2vw 3.9vw 2vw;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width:480px) {
+  #btn-cart{
+    font-size: 6.8vw;
+    padding: 1.4vw 3.1vw 8vw 3vw;
+    border-radius: 6px;
   }
 }
 
