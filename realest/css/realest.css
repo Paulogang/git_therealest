@@ -222,7 +222,7 @@ font-size: 4.5vw;
 }
 
 #homepage_section_2{
-  background: url(../images/shoes-hanging.png);
+  background: url(../images/shoes-flinging.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -414,7 +414,7 @@ font-size: 4.5vw;
     width: auto;
     font-size: 2.8vw;
     line-height: 3.6vw;
-    text-align: center;
+    text-align: left;
     margin-bottom: 5vw;
   }
 }
@@ -3974,9 +3974,21 @@ font-size: 4.5vw;
   }
 }
 
+#product-description{
+  font-family: oswald-extra-light;
+  font-size: 1.8vw;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  margin: 5vw 0 0 0;
+}
 
-
-
+#product-description p{
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
 
 
 

@@ -42,6 +42,11 @@
 					</div>
 					<a class="size-btn" id="btn-cart">add to cart</a>
 				</div>
+				<div id="product-description">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</p>
+				</div>
 			</div>
 		</div>
 
