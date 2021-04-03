@@ -35,6 +35,7 @@
 
 html{
   width: 100%;
+  background-color: #000;
 }
 
 body {
@@ -2326,6 +2327,7 @@ font-size: 4.5vw;
 
 #footer{
   height:27vw;
+  margin-top: 2vw;
   background-image: url(../images/footer-background-dark-1.png);
   background-color: #0f0f0f;
   background-size: cover;
@@ -2345,8 +2347,10 @@ font-size: 4.5vw;
     display: block;
     height: auto;
     text-align: center;
-    padding: 5vw 0 9vw 0;
+    margin: 5vw 6vw 9vw 6vw;
+    padding-top: 3vw;
     background-image: url(../images/footer-background-mobile-dark.png);
+    border-top: 4px solid #fff;
   }
 }
 
@@ -2376,7 +2380,7 @@ font-size: 4.5vw;
   #footer-grow{
     display:block;
     padding: 0;
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -2384,7 +2388,7 @@ font-size: 4.5vw;
   #footer-navigate{
     display:block;
     padding: 0;
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -2398,7 +2402,7 @@ font-size: 4.5vw;
   #footer-contact{
     display:block;
     padding: 0;
-    text-align: center;
+    text-align: left;
       margin-right:0;
   }
 }
@@ -2454,7 +2458,7 @@ font-size: 4.5vw;
 
 @media (max-width:600px) {
   #footer a, #footer p{
-    font-size: 4vw;
+    font-size: 3.6vw;
     line-height: 6vw;
   }
 }
@@ -3523,6 +3527,7 @@ font-size: 4.5vw;
 
 #product_section_1{
   height: 58vw;
+  margin-top: 1vw;
   background-color: #000;
   background-size: cover;
   background-position: center;
@@ -3549,7 +3554,7 @@ font-size: 4.5vw;
 @media (max-width: 768px){
   #product_section_1_left{
     width: 100%;
-    padding: 0 4vw 0 4vw;
+    padding: 0 6vw 0 6vw;
   }
 }
 
@@ -3558,10 +3563,16 @@ font-size: 4.5vw;
   max-height: -webkit-fill-available;
 }
 
+@media (max-width: 768px) {
+  #single-product-image{
+    margin-top: 3vw;
+  }
+}
+
 #product_section_1_right{
   width: 50%;
   height: 100%;
-  padding: 0 3vw 0 3vw;
+  padding: 3vw 3vw 0 3vw;
   display: inline-block;
   box-sizing: border-box;
   background-image: url("../images/product-page-right.jpg");
@@ -3577,7 +3588,7 @@ font-size: 4.5vw;
 @media (max-width: 768px){
   #product_section_1_right{
     width: 100%;
-    padding: 0 5vw 10vw 5vw;
+    padding: 0 6vw 8vw 6vw;
   }
 }
 
@@ -3612,6 +3623,11 @@ font-size: 4.5vw;
   text-transform: uppercase;
   line-height: 5vw;
   letter-spacing: -0.015em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+#product-name h1{
   margin-block-start: 0;
   margin-block-end: 0;
 }
@@ -3658,6 +3674,11 @@ font-size: 4.5vw;
   text-transform: uppercase;
   line-height: 5vw;
   letter-spacing: -0.015em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+#product-price h1{
   margin-block-start: 0;
   margin-block-end: 0;
 }
@@ -3977,12 +3998,21 @@ font-size: 4.5vw;
 #product-description{
   font-family: oswald-extra-light;
   font-size: 1.8vw;
+  line-height: 3vw;
   margin-block-start: 0;
   margin-block-end: 0;
   display: inline-block;
   text-decoration: none;
   color: #fff;
   margin: 5vw 0 0 0;
+}
+
+@media (max-width: 600px) {
+  #product-description{
+    margin: 5vw 0 0 0;
+    font-size: 4vw;
+    line-height: 6.8vw;
+  }
 }
 
 #product-description p{
