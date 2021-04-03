@@ -2360,7 +2360,7 @@ font-size: 4.5vw;
 
 @media (max-width:480px) {
   #footer{
-    padding: 5vw 0 9vw 5vw;
+    padding: 0 0 9vw 5vw;
   }
 }
 
@@ -3605,7 +3605,7 @@ font-size: 4.5vw;
 @media (max-width: 480px){
   #product_section_1_right{
     width: 100%;
-    padding: 0 4vw 10vw 4vw;
+    padding: 0 6vw 0 6vw;
   }
 }
 
@@ -4002,8 +4002,8 @@ font-size: 4.5vw;
 
 @media (max-width:480px) {
   #btn-cart{
-    font-size: 6.8vw;
-    padding: 1.4vw 3.1vw 8vw 3vw;
+    font-size: 6.6vw;
+    padding: 1.9vw 3.1vw 8vw 3vw;
     border-radius: 6px;
   }
 }
