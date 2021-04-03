@@ -2327,7 +2327,7 @@ font-size: 4.5vw;
 
 #footer{
   height:27vw;
-  margin-top: 2vw;
+  margin-top: 4vw;
   background-image: url(../images/footer-background-dark-1.png);
   background-color: #0f0f0f;
   background-size: cover;
@@ -3551,6 +3551,12 @@ font-size: 4.5vw;
   box-sizing: border-box;
 }
 
+@media (max-width:900px){
+  #product_section_1_left{
+    width: 50%;
+  }
+}
+
 @media (max-width: 768px){
   #product_section_1_left{
     width: 100%;
@@ -3581,7 +3587,7 @@ font-size: 4.5vw;
 
 @media (max-width: 900px){
   #product_section_1_right{
-    padding: 0 2vw 0 2vw;
+    padding: 3vw 3vw 3vw 3vw;
   }
 }
 
@@ -3602,6 +3608,12 @@ font-size: 4.5vw;
 #product-page-titles{
   display: flex;
   justify-content:space-between;
+}
+
+@media (max-width:900px) {
+  #product-page-titles{
+    margin-bottom: 5vw;
+  }
 }
 
 @media (max-width:768px) {
@@ -3635,7 +3647,7 @@ font-size: 4.5vw;
 @media (max-width:900px) {
   #product-name{
     font-size: 4.3vw;
-    line-height: 5.7vw;
+    line-height: 5.8vw;
   }
 }
 
@@ -3730,7 +3742,7 @@ font-size: 4.5vw;
 
 @media (max-width:900px) {
   .buying-options-label{
-        font-size: 4.4vw;
+        font-size: 3.5vw;
   }
 }
 
@@ -3762,6 +3774,12 @@ font-size: 4.5vw;
   margin-block-start: 0;
   margin-block-end: 0;
   margin-top: 3vw;
+}
+
+@media (max-width:900px) {
+  .buying-options-label p{
+    margin-top: 2vw;
+  }
 }
 
 @media (max-width:768px) {
@@ -3959,7 +3977,7 @@ font-size: 4.5vw;
 @media (max-width:900px) {
   #btn-cart{
     font-size: 3vw;
-    padding: 1vw 2vw 3.9vw 2vw;
+    padding: 1vw 2vw 4vw 2vw;
   }
 }
 
@@ -4005,6 +4023,28 @@ font-size: 4.5vw;
   text-decoration: none;
   color: #fff;
   margin: 5vw 0 0 0;
+}
+
+@media (max-width: 1200px) {
+  #product-description{
+    font-size: 2.2vw;
+    line-height: 3.5vw;
+  }
+}
+
+@media (max-width: 900px) {
+  #product-description{
+    font-size: 2.35vw;
+    line-height: 3.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  #product-description{
+    font-size: 3.4vw;
+    line-height: 5.7vw;
+    margin-top: 9vw;
+  }
 }
 
 @media (max-width: 600px) {
