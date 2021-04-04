@@ -4103,7 +4103,10 @@ font-size: 4.5vw;
   }
 }
 
-
+#contact_section_1{
+  height: 36vw;
+  background-color: blue;
+}
 
 
 

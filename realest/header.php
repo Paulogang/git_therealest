@@ -20,7 +20,7 @@
 							<a href="index.php">home</a>
 							<a href="about">about</a>
 							<a href="shop">shop</a>
-							<a href="index.php">join us</a>
+							<a href="contact">join us</a>
 						</nav>
 						<label id="burger-menu-icon">&#9776;</label>
 					</div>
@@ -28,9 +28,9 @@
 				<div id="nav-bar-mobile" class>
 					<nav role='navigation' id="nav-list-mobile">
 						<a href="index.php">home</a>
-						<a href="index.php">about</a>
-						<a href="index.php">shop</a>
-						<a href="index.php">join us</a>
+						<a href="about">about</a>
+						<a href="shop">shop</a>
+						<a href="contact">join us</a>
 					</nav>
 				</div>
 		</header><!-- #masthead -->
