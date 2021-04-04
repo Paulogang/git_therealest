@@ -35,7 +35,7 @@
 
 html{
   width: 100%;
-  background-color: #000;
+  background-color: #fff;
 }
 
 body {
@@ -3372,7 +3372,7 @@ font-size: 4.5vw;
   padding: 0.06em;
   -webkit-transform: skewX(-6deg);
   font-style: normal;
-  margin-top: 0.6vw;
+  margin-top: 1.5vw;
 }
 
 @media (max-width:768px) {
@@ -4069,9 +4069,9 @@ font-size: 4.5vw;
 
 @media (max-width: 320px) {
   #product-description{
-    margin: 15vw 0 0 0;
+    margin: 8vw 0 0 0;
     font-size: 5.7vw;
-    line-height: 8vw;
+    line-height: 9vw;
     padding-bottom: 7vw;
   }
 }
@@ -4099,7 +4099,7 @@ font-size: 4.5vw;
 
 @media (max-width: 320px) {
   #product-description p{
-    padding-bottom: 17vw;
+    padding-bottom: 21vw;
   }
 }
 
