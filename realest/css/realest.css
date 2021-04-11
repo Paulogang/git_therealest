@@ -2335,6 +2335,12 @@ font-size: 4.5vw;
   justify-content: space-between;
 }
 
+@media (min-width:600px) {
+  #footer{
+    padding: 2vw 0 1.7vw 0;
+  }
+}
+
 @media (max-width:900px) {
   #footer{
     height: 32vw;
@@ -2343,7 +2349,8 @@ font-size: 4.5vw;
 
 @media (max-width:768px) {
   #footer{
-    padding-top: 8vw;
+    padding-top: 4vw;
+    padding: 4vw 0 8vw 0;
   }
 }
 
@@ -2454,7 +2461,7 @@ font-size: 4.5vw;
 @media (max-width:768px) {
   #footer a, #footer p{
     font-size: 2.5vw;
-    line-height: 3vw;
+    line-height: 4vw;
   }
 }
 
