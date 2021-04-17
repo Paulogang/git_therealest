@@ -2604,7 +2604,7 @@ font-size: 4.5vw;
   text-transform: uppercase;
   margin-block-start: 0;
   margin-block-end: 0;
-  line-height: 7.5vw;
+  line-height: 7.8vw;
   letter-spacing: -0.015em;
   color: #fff;
   display: inline-block;
@@ -3317,7 +3317,7 @@ font-size: 4.5vw;
   text-transform: uppercase;
   margin-block-start: 0;
   margin-block-end: 0;
-  line-height: 9vw;
+  line-height: 8.4vw;
   color: #fff;
   letter-spacing: -0.5vh;
 }
@@ -4110,10 +4110,33 @@ font-size: 4.5vw;
 }
 
 #contact_section_1{
-  height: 36vw;
-  background-color: blue;
+  height: 44vw;
+  display: flex;
 }
 
+#contact_sub_1{
+  width: 50%;
+  background-color: #fff;
+  background: url(../images/linkup.png);
+  background-size: cover;
+}
+
+#contact_sub_2{
+  width: 50%;
+  background-color: #f4f4f4;
+  padding: 7vw 8vw 1vw 8vw;
+  box-sizing: border-box;
+}
+
+#contact_sub_2 h1{
+  font-family: tungsten;
+    color: #000;
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    line-height: 5.5vw;
+}
 
 
 

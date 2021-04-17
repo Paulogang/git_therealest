@@ -7,7 +7,12 @@ get_header();
 		<main id="main" class="site-main">
 
 			<div id="contact_section_1">
+				<div id="contact_sub_1">
 
+				</div>
+				<div id="contact_sub_2">
+					<h1>linkup we cool<br>talk to us</h1>
+				</div>
 			</div>
 
 		<?php
