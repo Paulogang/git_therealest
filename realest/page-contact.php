@@ -12,6 +12,8 @@ get_header();
 				</div>
 				<div id="contact_sub_2">
 					<h1>linkup we cool<br>talk to us</h1>
+					<p>For any information, collaboration, coverage, partnership please contact us
+					by email, via instagram or directly through this contact form.</p>
 				</div>
 			</div>
 
