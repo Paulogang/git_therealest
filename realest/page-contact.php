@@ -14,6 +14,12 @@ get_header();
 					<h1>linkup we cool<br>talk to us</h1>
 					<p>For any information, collaboration, coverage, partnership please contact us
 					by email, via instagram or directly through this contact form.</p>
+					<div id="newsletter">
+						<input type="text" id="user-name" name="name" placeholder="NAME">
+						<input type="text" id="user-email" name="email" placeholder="EMAIL">
+					</div>
+					<a class="promo-cta"  href="#">Submit</a>
+				</div>
 				</div>
 			</div>
 

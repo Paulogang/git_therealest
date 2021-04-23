@@ -4110,7 +4110,6 @@ font-size: 4.5vw;
 }
 
 #contact_section_1{
-  height: 44vw;
   display: flex;
 }
 
@@ -4123,8 +4122,8 @@ font-size: 4.5vw;
 
 #contact_sub_2{
   width: 50%;
-  background-color: #f4f4f4;
-  padding: 7vw 8vw 1vw 8vw;
+  background-color: #f2f2f2;
+  padding: 7vw 8vw 7vw 8vw;
   box-sizing: border-box;
 }
 
@@ -4146,6 +4145,7 @@ font-size: 4.5vw;
   margin-block-end: 0;
   line-height: 2.4vw;
   margin-top: 3vw;
+  margin-bottom: 3vw;
 }
 
 
