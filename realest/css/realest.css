@@ -4113,11 +4113,38 @@ font-size: 4.5vw;
   display: flex;
 }
 
+@media (max-width:768px) {
+  #contact_section_1{
+    display: block;
+  }
+
+}
+
 #contact_sub_1{
-  width: 50%;
-  background-color: #fff;
+  width: 50vw;
+  background-color: #000;
   background: url(../images/linkup.png);
   background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px){
+#contact_sub_1 {
+    display: inline-block;
+    width: 100%;
+    height: 90vw;
+    background-image: url(../images/linkup.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width:768px) {
+  #contact_sub_1{
+    width: 100%;
+  }
 }
 
 #contact_sub_2{
@@ -4127,33 +4154,97 @@ font-size: 4.5vw;
   box-sizing: border-box;
 }
 
+@media (max-width:768px) {
+  #contact_sub_2{
+    width: 100%;
+  }
+}
+
 #contact_sub_2 h1{
   font-family: tungsten;
     color: #000;
-    font-size: 6.5vw;
+    font-size: 4.5vw;
     text-transform: uppercase;
     margin-block-start: 0;
     margin-block-end: 0;
-    line-height: 5.5vw;
+    line-height: 4vw;
 }
 
 #contact_sub_2 p{
   font-family: oswald-extra-light;
   color: #000;
-  font-size: 1.6vw;
+  font-size: 1.5vw;
   margin-block-start: 0;
   margin-block-end: 0;
   line-height: 2.4vw;
   margin-top: 3vw;
   margin-bottom: 3vw;
+  letter-spacing: 0.5px;
 }
 
+.contact-cta{
+  border: 0.1em solid #111;
+  color: #fff;
+  background-color: #111;
+  font-size: 2.3vw;
+  letter-spacing: -0.02em;
+  font-family: bebasneue-bold;
+  text-transform: uppercase;
+  padding: 0.24em 0.37em 0.29em 0.28em;
+  margin-top: 3vw;
+  transform: scale(1,0.8);
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.5s;
 
+}
 
+@media (max-width:1200px) {
+  .contact-cta{
+    font-size: 3.5vw;
+  }
+}
 
+@media (max-width:768px) {
+  .contact-cta{
+    font-size: 3.7vw;
+  }
+}
 
+@media (max-width:480px) {
+  .contact-cta{
+    font-size: 5.5vw;
+  }
+}
 
+.contact-cta:hover{
+  background-color: #fff;
+  border: 0.1em solid #000;
+  color: #000;
+}
 
+#user-name-contact {
+    display: block;
+    margin-bottom: 1vw;
+    font: 600 1.4vw oswald-extra-light;
+    border-width: 0;
+    width: 18.5vw;
+    height: 3vw;
+    border-radius: 0.3vw;
+    padding-left: 1.4vw;
+    max-width: 340px;
+}
+
+#user-email-contact {
+    display: block;
+    font: 600 1.4vw oswald-extra-light;
+    border-width: 0;
+    width: 18.5vw;
+    height: 3vw;
+    border-radius: 0.3vw;
+    padding-left: 1.4vw;
+    max-width: 340px;
+}
 
 
 
