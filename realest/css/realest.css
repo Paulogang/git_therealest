@@ -4160,6 +4160,13 @@ font-size: 4.5vw;
   }
 }
 
+@media (max-width:480px) {
+  #contact_sub_2{
+    width: 100%;
+    padding: 13vw 8vw 14vw 8vw;
+  }
+}
+
 #contact_sub_2 h1{
   font-family: tungsten;
   color: #000;
@@ -4181,6 +4188,20 @@ font-size: 4.5vw;
   #contact_sub_2 h1{
     font-size: 9.8vw;
     line-height: 8.5vw;
+  }
+}
+
+@media (max-width:600px) {
+  #contact_sub_2 h1{
+    font-size: 13vw;
+    line-height: 10.8vw;
+  }
+}
+
+@media (max-width:480px) {
+  #contact_sub_2 h1{
+    font-size: 13.5vw;
+    line-height: 11vw;
   }
 }
 
@@ -4221,6 +4242,22 @@ font-size: 4.5vw;
   }
 }
 
+@media (max-width:600px) {
+  #contact_sub_2 p{
+    font-size: 3.6vw;
+    line-height: 5.3vw;
+  }
+}
+
+@media (max-width:480px) {
+  #contact_sub_2 p{
+    font-size: 4.2vw;
+    line-height: 6vw;
+    margin-top: 8vw;
+    margin-bottom: 9vw;
+  }
+}
+
 .contact-cta{
   border: 0.1em solid #111;
   color: #fff;
@@ -4256,9 +4293,17 @@ font-size: 4.5vw;
   }
 }
 
+@media (max-width:600px) {
+  .contact-cta{
+    font-size: 6vw;
+    margin-top: 6.5vw;
+  }
+}
+
 @media (max-width:480px) {
   .contact-cta{
-    font-size: 5.5vw;
+    font-size: 6.5vw;
+    margin-top: 10.5vw;
   }
 }
 
@@ -4306,6 +4351,28 @@ font-size: 4.5vw;
   }
 }
 
+@media (max-width:600px) {
+  #user-name-contact {
+    width: 55vw;
+    height: 8vw;
+    font: 600 2.7vw oswald-extra-light;
+    margin-bottom: 1.5vw;
+    padding-left: 2vw;
+    max-width: 350px;
+  }
+}
+
+@media (max-width:480px) {
+  #user-name-contact {
+    width: 55vw;
+    height: 9vw;
+    font: 600 3.2vw oswald-extra-light;
+    margin-bottom: 1.5vw;
+    padding-left: 2vw;
+    max-width: 350px;
+  }
+}
+
 #user-email-contact {
     display: block;
     font: 600 1.25vw oswald-extra-light;
@@ -4342,6 +4409,50 @@ font-size: 4.5vw;
     padding-left: 2vw;
   }
 }
+
+@media (max-width:600px) {
+  #user-email-contact {
+    width: 55vw;
+    height: 8vw;
+    font: 600 2.7vw oswald-extra-light;
+    margin-bottom: 1.5vw;
+    padding-left: 2vw;
+    max-width: 350px;
+  }
+}
+
+@media (max-width:480px) {
+  #user-email-contact {
+    width: 55vw;
+    height: 9vw;
+    font: 600 3.2vw oswald-extra-light;
+    margin-bottom: 1.5vw;
+    padding-left: 2vw;
+    max-width: 350px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
