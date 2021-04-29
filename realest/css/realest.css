@@ -4205,6 +4205,13 @@ font-size: 4.5vw;
   }
 }
 
+@media (max-width:320px) {
+  #contact_sub_2 h1{
+    font-size: 15vw;
+    line-height: 13vw;
+  }
+}
+
 #contact_sub_2 p{
   font-family: oswald-extra-light;
   color: #000;
@@ -4258,6 +4265,13 @@ font-size: 4.5vw;
   }
 }
 
+@media (max-width:320px) {
+  #contact_sub_2 p{
+    font-size: 5.5vw;
+    line-height: 8vw;
+  }
+}
+
 .contact-cta{
   border: 0.1em solid #111;
   color: #fff;
@@ -4267,7 +4281,7 @@ font-size: 4.5vw;
   font-family: bebasneue-bold;
   text-transform: uppercase;
   padding: 0.24em 0.37em 0.29em 0.28em;
-  margin-top: 3vw;
+  margin-top: 4vw;
   transform: scale(1,0.8);
   display: inline-block;
   text-decoration: none;
@@ -4303,7 +4317,7 @@ font-size: 4.5vw;
 @media (max-width:480px) {
   .contact-cta{
     font-size: 6.5vw;
-    margin-top: 10.5vw;
+    margin-top: 10vw;
   }
 }
 
@@ -4373,6 +4387,17 @@ font-size: 4.5vw;
   }
 }
 
+@media (max-width:320px) {
+  #user-name-contact {
+    width: 75vw;
+    height: 11vw;
+    font: 600 4vw oswald-extra-light;
+    margin-bottom: 2.5vw;
+    padding-left: 2vw;
+    max-width: 350px;
+  }
+}
+
 #user-email-contact {
     display: block;
     font: 600 1.25vw oswald-extra-light;
@@ -4432,7 +4457,16 @@ font-size: 4.5vw;
   }
 }
 
-
+@media (max-width:320px) {
+  #user-email-contact {
+    width: 75vw;
+    height: 11vw;
+    font: 600 4vw oswald-extra-light;
+    margin-bottom: 2.5vw;
+    padding-left: 2vw;
+    max-width: 350px;
+  }
+}
 
 
 
