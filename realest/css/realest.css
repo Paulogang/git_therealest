@@ -2333,24 +2333,26 @@ font-size: 4.5vw;
   background-repeat: no-repeat;
   display: flex;
   justify-content: space-between;
+  padding: 2vw 0 2.1vw 0;
 }
 
-@media (min-width:600px) {
+@media (min-width:1200px) {
   #footer{
-    padding: 2vw 0 1.7vw 0;
+    padding: 2vw 0 2.5vw 0;
   }
 }
 
-@media (max-width:900px) {
+@media (min-width:900px) {
   #footer{
     height: 32vw;
+    padding: 2vw 0 4.5vw 0;
   }
 }
 
 @media (max-width:768px) {
   #footer{
     padding-top: 4vw;
-    padding: 4vw 0 8vw 0;
+    padding: 4vw 0 13vw 0;
   }
 }
 
@@ -2367,6 +2369,12 @@ font-size: 4.5vw;
 @media (max-width:480px) {
   #footer{
     padding: 10vw 0 9vw 15vw;
+  }
+}
+
+@media (max-width:320px) {
+  #footer{
+    padding: 14vw 0 9vw 15vw;
   }
 }
 
@@ -2438,6 +2446,12 @@ font-size: 4.5vw;
   }
 }
 
+@media (max-width:320px) {
+  #footer h1{
+    font-size: 11vw;
+  }
+}
+
 #footer a, #footer p{
   font-family: oswald-extra-light;
   font-size: 1.7vw;
@@ -2448,13 +2462,14 @@ font-size: 4.5vw;
   display: inline-block;
   text-decoration: none;
   color: #fff;
-  margin-bottom: 1.5vw;
+  margin-bottom: 2vw;
 }
 
 @media (max-width:900px) {
   #footer a, #footer p{
     font-size: 2.2vw;
     line-height: 2.7vw;
+    margin-bottom: 3vw;
   }
 }
 
@@ -2462,6 +2477,7 @@ font-size: 4.5vw;
   #footer a, #footer p{
     font-size: 2.5vw;
     line-height: 4vw;
+    margin-bottom: 2.3vw;
   }
 }
 
@@ -2470,12 +2486,14 @@ font-size: 4.5vw;
   #footer a, #footer p{
     font-size: 3.6vw;
     line-height: 6vw;
+    margin-bottom: 3vw;
   }
 }
 
 @media (max-width:480px) {
   #footer a, #footer p{
-    font-size: 4.7vw;
+    font-size: 4.5vw;
+    margin-bottom: 6vw;
   }
 }
 
@@ -2489,6 +2507,12 @@ font-size: 4.5vw;
 #footer-navigate ul, #footer-grow ul{
   padding-inline-start: 0;
   margin-bottom: 11vw;
+}
+
+@media (max-width:600px) {
+  #footer-navigate ul, #footer-grow ul{
+    margin-bottom: 8vw;
+  }
 }
 
 #footer a:hover{
@@ -4170,11 +4194,11 @@ font-size: 4.5vw;
 #contact_sub_2 h1{
   font-family: tungsten;
   color: #000;
-  font-size: 4.5vw;
+  font-size: 6vw;
   text-transform: uppercase;
   margin-block-start: 0;
   margin-block-end: 0;
-  line-height: 4vw;
+  line-height: 5vw;
 }
 
 @media (max-width:900px) {
@@ -4200,8 +4224,8 @@ font-size: 4.5vw;
 
 @media (max-width:480px) {
   #contact_sub_2 h1{
-    font-size: 13.5vw;
-    line-height: 11vw;
+    font-size: 15vw;
+    line-height: 13vw;
   }
 }
 
@@ -4258,8 +4282,8 @@ font-size: 4.5vw;
 
 @media (max-width:480px) {
   #contact_sub_2 p{
-    font-size: 4.2vw;
-    line-height: 6vw;
+    font-size: 4.8vw;
+    line-height: 7.5vw;
     margin-top: 8vw;
     margin-bottom: 9vw;
   }
@@ -4276,7 +4300,7 @@ font-size: 4.5vw;
   border: 0.1em solid #111;
   color: #fff;
   background-color: #111;
-  font-size: 2.3vw;
+  font-size: 2.5vw;
   letter-spacing: -0.02em;
   font-family: bebasneue-bold;
   text-transform: uppercase;
@@ -4318,6 +4342,12 @@ font-size: 4.5vw;
   .contact-cta{
     font-size: 6.5vw;
     margin-top: 10vw;
+  }
+}
+
+@media (max-width:320px) {
+  .contact-cta{
+    font-size: 8vw;
   }
 }
 
