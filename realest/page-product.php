@@ -29,6 +29,7 @@
 					<button type="button" id="btn-black"></button>
 					<button type="button" id="btn-grey"></button>
 				</div>
+
 				<div class="buying-options-label">
 					<p>size</p>
 				</div>

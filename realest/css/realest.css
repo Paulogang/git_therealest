@@ -2336,13 +2336,13 @@ font-size: 4.5vw;
   padding: 2vw 0 2.1vw 0;
 }
 
-@media (min-width:1200px) {
+@media (max-width:1200px) {
   #footer{
     padding: 2vw 0 2.5vw 0;
   }
 }
 
-@media (min-width:900px) {
+@media (max-width:900px) {
   #footer{
     height: 32vw;
     padding: 2vw 0 4.5vw 0;
@@ -2352,7 +2352,7 @@ font-size: 4.5vw;
 @media (max-width:768px) {
   #footer{
     padding-top: 4vw;
-    padding: 4vw 0 13vw 0;
+    padding: 4vw 0 9vw 0;
   }
 }
 
@@ -4497,14 +4497,6 @@ font-size: 4.5vw;
     max-width: 350px;
   }
 }
-
-
-
-
-
-
-
-
 
 
 
