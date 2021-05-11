@@ -38,5 +38,4 @@
 </div><!-- .site -->
 
 <?php wp_footer(); ?>
-<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="MGFjMjJkOTYtYzAyYy00NGI4LWIxY2UtZDZhNzIwZjM5ZWVi" id="snipcart"></script>
 </body>

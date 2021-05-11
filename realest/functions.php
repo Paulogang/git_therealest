@@ -1,218 +1,77 @@
 <?php
-function call_snipcart_api($url, $method = "GET", $post_data = null) {
-    $url = 'https://app.snipcart.com/api' . $url;
 
-    $query = curl_init();
-
-
-    $headers = array();
-    $headers[] = 'Content-type: application/json';
-    if ($post_data)
-        $headers[] = 'Content-Length: ' . strlen($post_data);
-    $headers[] = 'Accept: application/json';
-
-    $secret = file_get_contents(get_stylesheet_directory() . "/secret.txt");
-    $secret = str_replace("\n", "", $secret);
-    $secret = str_replace("\r", "", $secret);
-    $headers[] = 'Authorization: Basic '.base64_encode($secret . ":");
-    $options = array(
-        CURLOPT_RETURNTRANSFER => 1,
-        CURLOPT_URL => $url,
-        CURLOPT_HTTPHEADER => $headers,
-        CURLOPT_SSL_VERIFYHOST => 0,
-        CURLOPT_SSL_VERIFYPEER => 0
-    );
-
-    if ($post_data) {
-        $options[CURLOPT_CUSTOMREQUEST] = $method;
-        $options[CURLOPT_POSTFIELDS] = $post_data;
-    }
-
-    curl_setopt_array($query, $options);
-    $resp = curl_exec($query);
-    curl_close($query);
-
-    return json_decode($resp);
-}
-
-add_action( 'wp_enqueue_scripts', 'snipcart_enqueue_styles' );
-function snipcart_enqueue_styles() {
+add_action( 'wp_enqueue_scripts', 'wp_enqueue_styles' );
+function wp_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'realest', get_template_directory_uri() . '/css/realest.css' );
-    wp_enqueue_style( 'snipcart-style', 'https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css');
+
+    
+    wp_enqueue_script ( 'main', get_template_directory_uri() . '/js/main.js' );
+
 }
 
-add_action('wp_ajax_nopriv_snipcart_endpoint', 'snipcart_endpoint');
-//Allow authenticated call on the endpoint. Only needed for debugging purposes.
-add_action('wp_ajax_snipcart_endpoint', 'snipcart_endpoint');
-function snipcart_endpoint() {
-    $token = $_SERVER["HTTP_X_SNIPCART_REQUESTTOKEN"];
-    $resp = call_snipcart_api('/requestvalidation/' . $token);
-    if (strpos($resp->resource, 'wp-admin/admin-ajax.php?action=snipcart_endpoint') === false) {
-        echo "Caller is not snipcart";
-        wp_die();
-    }
+register_nav_menus(array(
+    'main-menu' => __('Main Menu', 'therealest')
+));
 
-    $json = file_get_contents('php://input');
-    $body = json_decode($json, true);
 
-    if (is_null($body) or !isset($body['eventName'])) {
-        header('HTTP/1.1 400 Bad Request');
-        wp_die();
-    }
+function create_posttype() {
 
-    switch ($body['eventName']) {
-    case 'order.completed':
-        foreach($body['content']['items'] as $item) {
-            handle_item($item);
-        }
-        break;
-    }
+    register_post_type( 'product',
+    
+          array(
+              'labels' => array(
+                  'name' => __( 'Products' ),
+                  'singular_name' => __( 'Product' )
+        ),
+        'supports' => array( 'title', 'editor', 'custom-fields','thumbnail' ),
+              'public' => true,
+              'has_archive' => true,
+        	  'rewrite' => array('slug' => 'product'),
+              'menu_icon'  => 'dashicons-cart'
+        
+          )
+      );
+  }
+  
+add_action( 'init', 'create_posttype' );
 
-    wp_die();
+
+ function wpm_add_taxonomies() {
+
+	$labels = array(
+		'name'                       => _x( 'Product Categories', 'taxonomy general name'),
+		'singular_name'              => _x( 'Product Category', 'taxonomy singular name'),
+		'search_items'               => __( 'Search'),
+		'popular_items'              => __( 'Popular categories'),
+		'all_items'                  => __( 'All categories'),
+		'edit_item'                  => __( 'Edit a category'),
+		'update_item'                => __( 'Update a category'),
+		'add_new_item'               => __( 'Add a new category'),
+		'new_item_name'              => __( 'New category name'),
+		'add_or_remove_items'        => __( 'Add or remove a category'),
+		'choose_from_most_used'      => __( 'Choose from the most used categories'),
+		'not_found'                  => __( 'No categories found'),
+		'menu_name'                  => __( 'Categories'),
+	);
+
+	$args_cat_serie = array(
+		'hierarchical' => true,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_in_rest' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+	);
+
+    register_taxonomy( 'collections', 'product', $args_cat_serie );
 }
 
-function handle_item($item) {
-    global $wpdb;
+add_action( 'init', 'wpm_add_taxonomies', 0 ); 
 
-    $id = $wpdb->get_var( $wpdb->prepare( 
-        "
-		SELECT post_id
-		FROM $wpdb->postmeta
-		WHERE meta_value = %s AND meta_key = 'id'
-	", $item['id']
-    ) );
 
-    $qte = get_post_meta($id, 'inventory')[0];
-    update_post_meta($id, 'inventory', $qte - $item['quantity']);
-}
+add_theme_support( 'title-tag' );
+add_theme_support( 'post-thumbnails' );
 
-add_action( 'admin_enqueue_scripts', 'snipcart_enqueue_admin_script' );
-function snipcart_enqueue_admin_script( $hook ) {
-    wp_register_style('snipcart_admin_style',
-                        get_stylesheet_directory_uri() . '/css/admin.css', false, '1.0.0');
-    wp_enqueue_style('snipcart_admin_style');
-    if ( 'edit.php' === $hook && isset( $_GET['post_type'] ) && 'product' === $_GET['post_type'] ) {
 
-        wp_enqueue_script( 'snipcart_quick_edit',
-                            get_stylesheet_directory_uri() . '/js/quickedit.js',
-                            false, null, true );
 
-    }
-}
-
-add_action( 'admin_menu', 'register_custom_menu_page' );
-function register_custom_menu_page() {
-    add_menu_page('snipcart', 'Snipcart', 'manage_options', 'snipcart', 'snipcart_dashboard', '', 6);
-}
-
-function snipcart_dashboard() {
-    $resp = call_snipcart_api('/orders');
-    $statuses = array("Processed", "Disputed", "Shipped", "Delivered", "Pending", "Cancelled");
-
-    echo "<table class='snip-table'>";
-
-    echo "<tr>
-            <th>Invoice number</th>
-            <th>Payment method</th>
-            <th>Email</th>
-            <th>Total</th>
-            <th>Date</th>
-            <th>Order status</th>
-            <th>Update status</th>
-            <th>Items</th>
-          </tr>";
-
-    foreach ($resp->items as $order) {
-        echo "<tr>";
-        echo "<td>";
-        echo "<a target='_blank' href='https://app.snipcart.com/dashboard/orders/$order->token'>";
-        echo $order->invoiceNumber. "</a></td>";
-        echo "<td>" . $order->paymentMethod. "</td>";
-        echo "<td>" . $order->email . "</td>";
-        echo "<td>" . $order->finalGrandTotal. "$</td>";
-        $date = new DateTime($order->creationDate);
-        $outputDate = date_format($date, 'Y-m-d H:i');
-        echo "<td>" . $outputDate. "</td>";
-        echo "<td>" . $order->status. "</td>";
-        echo "<td><select class='order-status-select' data-token='$order->token'>";
-
-        foreach ($statuses as $status) {
-            echo "<option value='$status' ";
-            if ($status == $order->status) echo "selected='selected'";
-            echo ">$status</option>";
-        }
-
-        echo "</select>";
-
-        echo "<td>";
-        foreach ($order->items as $item) {
-            echo $item->name . "<br/>";
-        }
-
-        echo "</tr>";
-    }
-
-    echo "</table>";
-
-    echo "<script src='". get_stylesheet_directory_uri() . '/js/admin.js' . "' />";
-}
-
-add_action('wp_ajax_snipcart_update_status', 'snipcart_update_status');
-function snipcart_update_status() {
-    if (!isset($_POST['token']) || !isset($_POST['value'])) {
-        header('HTTP/1.1 400 Bad Request');
-        echo "Bad request";
-        wp_die();
-    }
-
-    $url = "/orders/" . $_POST['token'];
-    $result = call_snipcart_api($url, "PUT", json_encode(array(
-        "status" => $_POST['value']
-    )));
-
-    if ($result->status !== $_POST['value']) {
-        header('HTTP/1.1 500 Internal Server Error');
-        echo "Error while communicating with Snipcart";
-    }
-
-    wp_die();
-}
-
-add_filter( 'manage_product_posts_columns', 'manage_product_posts_columns' );
-function manage_product_posts_columns( $columns ) {
-    $columns['inventory'] = esc_html__( 'Inventory');
-
-return $columns;
-}
-
-add_action( 'manage_posts_custom_column' , 'display_product_inventory', 10, 2 );
-function display_product_inventory( $column, $post_id ) {
-    if ($column == 'inventory'){
-        echo '<span>', get_post_meta($post_id, 'inventory')[0], '</span>';
-    }
-}
-
-add_filter( 'quick_edit_custom_box', 'snipcart_quick_edit_box');
-function snipcart_quick_edit_box($column_name) {
-    if ($column_name !== 'inventory') return;
-
-    ?>
-    <fieldset class="inline-edit-col-right inline-edit-book">
-                  <div class="inline-edit-col column-<?php echo $column_name; ?>">
-                  <label class="inline-edit-group">
-                  <span class="title">Inventory</span><input name="inventory" />
-                  </label>
-                  </div>
-    </fieldset>
-    <?php
-}
-
-add_action('save_post', 'save_inventory');
-function save_inventory($id) {
-    if ("product" !== $_POST['post_type']) return;
-
-    if (isset($_POST['inventory'])) {
-        update_post_meta($id, 'inventory', $_POST['inventory']);
-    }
-}

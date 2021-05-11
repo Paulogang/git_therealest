@@ -159,9 +159,6 @@ header{
   margin-left: -2.3vw;
 }
 
-letter-spacing: -0.08em;
-font-weight: 900;
-font-size: 4.5vw;
 
 @media (max-width:1200px) {
   #hero-section-main-title{
@@ -222,7 +219,7 @@ font-size: 4.5vw;
   }
 }
 
-#homepage_section_2{
+#homepage_section_2 {
   background: url(../images/shoes-flinging.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -289,9 +286,8 @@ font-size: 4.5vw;
 }
 
 @media only screen and (max-width: 992px){
-  .homepage_section_2_header p{
+  .homepage_section_2_header p {
     width: 418px;
-    font-size:
   }
 }
 
