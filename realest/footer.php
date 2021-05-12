@@ -13,15 +13,14 @@
 			</div>
 			<div id="footer-navigate">
 				<h1>navigate</h1>
-				<ul>
-					<a href="#">home</a>
-					<br>
-					<a href="#">about</a>
-					<br>
-					<a href="#">shop</a>
-					<br>
-					<a href="#">join us</a>
-				</ul>
+				<?php
+
+					wp_nav_menu( array(
+						'container' => '',
+						'theme_location'  => 'main-menu', 
+					) );
+
+				?>
 			</div>
 			<div id="footer-contact">
 				<h1>get in touch</h1>

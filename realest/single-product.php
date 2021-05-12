@@ -21,15 +21,15 @@
 					</div>
 				</div>
 				<div class="buying-options-label">
-					<p>style: navy blue</p>
+					<p>style: <span class="color-selected">navy blue</span></p>
 				</div>
 				<div id="color-buttons">
-					<button type="button" id="btn-blue"></button>
-					<button type="button" id="btn-green"></button>
-					<button type="button" id="btn-red"></button>
-					<button type="button" id="btn-burgundy"></button>
-					<button type="button" id="btn-black"></button>
-					<button type="button" id="btn-grey"></button>
+					<button type="button" data-color="Navy Blue" id="btn-blue"></button>
+					<button type="button" data-color="Green" id="btn-green"></button>
+					<button type="button" data-color="Red" id="btn-red"></button>
+					<button type="button" data-color="Purple" id="btn-burgundy"></button>
+					<button type="button" data-color="Black" id="btn-black"></button>
+					<button type="button" data-color="Grey" id="btn-grey"></button>
 				</div>
 
 				<div class="buying-options-label">
@@ -52,8 +52,11 @@
                         data-item-description="<?php echo get_the_content();?>"
                         data-item-image="<?php echo the_post_thumbnail_url('large'); ?>"
                         data-item-custom2-name="Size"
-                        data-item-custom2-options="Small|Medium|Large"
-                        data-item-custom2-value="Medium">
+                        data-item-custom2-options="Small|Medium|Large|Xlarge|XXlarge"
+                        data-item-custom2-value="Medium"
+						data-item-custom3-name="Color"
+                        data-item-custom3-options="Navy Blue|Green|Red|Purple|Black|Grey"
+                        data-item-custom3-value="Navy Blue">
                         add to cart
                     </button>
 				</div>

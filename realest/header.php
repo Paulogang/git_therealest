@@ -19,10 +19,14 @@
 	      	</a>
 					<div id='nav-list-container'>
 						<nav role='navigation' id="nav-list">
-							<a href="index.php">home</a>
-							<a href="about">about</a>
-							<a href="shop">shop</a>
-							<a href="contact">join us</a>
+							<?php
+
+								wp_nav_menu( array(
+									'container' => '',
+									'theme_location'  => 'main-menu', 
+								) );
+
+							?>
 						</nav>
 						<label id="burger-menu-icon">&#9776;</label>
 					</div>
