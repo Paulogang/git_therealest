@@ -1498,7 +1498,7 @@ header{
   background-color: #000;
   align-items: center;
   justify-content: space-between;
-  padding: 0 0 0 3.5vw;
+  padding: 0 0 0 3vw;
   min-height: 50px;
   height: 6vw;
 }
@@ -1623,7 +1623,7 @@ header{
 
 #nav-list ul li a {
   color: #fff;
-  padding-right: 3.5vw;
+  padding-right: 3vw;
   list-style-type: none;
   text-transform: uppercase;
   font-family:bebasneue-bold;
@@ -3557,7 +3557,7 @@ header{
 }
 
 #product_section_1{
-  height: 58vw;
+  height: auto;
   background-color: #000;
   background-size: cover;
   background-position: center;
@@ -3574,7 +3574,7 @@ header{
 
 #product_section_1_left{
   width: 50%;
-  height: 100%;
+  padding: 3vw 1.5vw 3vw 3vw;
   display: inline-block;
   background-size: cover;
   background-repeat: no-repeat;
@@ -3608,7 +3608,7 @@ header{
 #product_section_1_right{
   width: 50%;
   height: 100%;
-  padding: 3vw 3vw 0 3vw;
+  padding: 3vw 3vw 0 1.5vw;
   display: inline-block;
   box-sizing: border-box;
   background-image: url("../images/product-page-right.jpg");
@@ -3844,6 +3844,11 @@ header{
   padding:1.58vw;
   cursor: pointer;
   margin-right: 0.5vw;
+}
+
+#color-buttons button.selected{
+  border: 5px solid white;
+  padding: 1.38vw;
 }
 
 @media (max-width:1200px) {
