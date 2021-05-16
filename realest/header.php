@@ -33,10 +33,13 @@
 				</div>
 				<div id="nav-bar-mobile" class>
 					<nav role='navigation' id="nav-list-mobile">
-						<a href="index.php">home</a>
-						<a href="about">about</a>
-						<a href="shop">shop</a>
-						<a href="contact">join us</a>
+					<?php
+						wp_nav_menu( array(
+							'container' => '',
+							'theme_location'  => 'main-menu', 
+						) );
+
+						?>
 					</nav>
 				</div>
 		</header><!-- #masthead -->

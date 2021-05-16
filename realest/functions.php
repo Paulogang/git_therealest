@@ -11,7 +11,8 @@ function wp_enqueue_styles() {
 }
 
 register_nav_menus(array(
-    'main-menu' => __('Main Menu', 'therealest')
+    'main-menu' => __('Main Menu', 'therealest'),
+    'branding-menu' => __('Branding Menu', 'therealest')
 ));
 
 

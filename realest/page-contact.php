@@ -14,10 +14,8 @@ get_header();
 					<p>For any information, collaboration, coverage, partnership please contact us
 					by email, via instagram or directly through this contact form.</p>
 					<div id="newsletter">
-						<input type="text" id="user-name-contact" name="name" placeholder="NAME">
-						<input type="text" id="user-email-contact" name="email" placeholder="EMAIL">
+						<?php echo do_shortcode('[contact-form-7 id="46" title="Formulaire Nous Joindre"]');?>
 					</div>
-					<a class="contact-cta"  href="#">Submit</a>
 				</div>
 				</div>
 			</div>
@@ -25,10 +23,6 @@ get_header();
 		<?php
 			get_footer();
 		?>
-
-
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
 
 		</main><!-- .site-main -->
 	</section><!-- .content-area -->

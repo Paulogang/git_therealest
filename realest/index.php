@@ -13,14 +13,14 @@ get_header();
 			<div class="hero-banner-2">
 				<h1 id="hero-section-main-title">Streetwear &nbsp; reality</h1>
 			</div>
-			<a id="showcase-cta" href="shop">shop now</a>
+			<a id="showcase-cta" href="<?php echo home_url();?>/shop">shop now</a>
 		</div>
 
 		<div id="homepage_section_4">
 			<div id="homepage_section_4_content">
 				<h1>About us</h1>
 				<p>We follow fashion and keep track of the culture too. One thing we love for sure is definetly to showcase both together. </p>
-				<a id="about-us-cta" href="#">Learn more</a>
+				<a id="about-us-cta" href="<?php echo home_url();?>/about">Learn more</a>
 			</div>
 			<img id="about-us-background-image" src="<?php echo get_template_directory_uri(); ?>/images/about-us-background-image.png">
 		</div>
@@ -42,7 +42,7 @@ get_header();
 					<h1 id="promo-1-long-title">rep the team</h1>
 					<h1 id="promo-1-short-title">rep<br>the<br>team</h1>
 					<p>it's a family thing</p>
-					<a class="promo-cta" href="#">shop now</a>
+					<a class="promo-cta" href="<?php echo home_url();?>/shop#tee">shop now</a>
 				</div>
 				<img id="promo-1-image" src="<?php echo get_template_directory_uri(); ?>/images/promo-1-image.png">
 			</div>
@@ -53,7 +53,7 @@ get_header();
 					<h1 id="promo-2-long-title">Hoodie season</h1>
 					<h1 id="promo-2-short-title">Hoodie <br> season</h1>
 					<p>Shop our latest drops</p>
-					<a class="promo-cta" href="#">shop now</a>
+					<a class="promo-cta" href="<?php echo home_url();?>/shop#hoodie">shop now</a>
 				</div>
 			</div>
 
@@ -61,7 +61,7 @@ get_header();
 				<div id="promo-3-left">
 					<h1 id="promo-3-title">Got hats<br> for days</h1>
 					<p>Welcome to the team</p>
-					<a class="promo-cta" href="#">shop now</a>
+					<a class="promo-cta" href="<?php echo home_url();?>/shop#hat">shop now</a>
 				</div>
 				<img id="promo-3-image" src="<?php echo get_template_directory_uri(); ?>/images/promo-3-image.png">
 			</div>
@@ -72,10 +72,9 @@ get_header();
 				<h1>words on <br> the street</h1>
 				<p>Subscribe to our news letter and never miss a drop.</p>
 				<div id="newsletter">
-					<input type="text" id="user-name" name="name" placeholder="NAME">
-					<input type="text" id="user-email" name="email" placeholder="EMAIL">
+					<?php echo do_shortcode('[contact-form-7 id="51" title="Formulaire Infolettre"]');?>
 				</div>
-				<a id="newsletter-cta" id="new" href="#">Submit</a>
+
 			</div>
 		</div>
 
@@ -123,9 +122,6 @@ get_header();
 		<?php
 			get_footer();
 		?>
-
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
 
 		</main><!-- .site-main -->
 	</section><!-- .content-area -->

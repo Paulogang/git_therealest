@@ -14,7 +14,7 @@ get_header();
 		</div>
 
 		<div id="shop-all-section">
-			<div class="product-title">
+			<div class="product-title" id="tee">
 				<h1>tees</h1>
 			</div>
 			<div class="product-image-container">
@@ -42,7 +42,7 @@ get_header();
 
 			</div>
 
-			<div class="product-title">
+			<div class="product-title" id="hoodie">
 				<h1>hoodies</h1>
 			</div>
 			<div class="product-image-container">
@@ -69,7 +69,7 @@ get_header();
 
 			</div>
 
-			<div class="product-title">
+			<div class="product-title" id="hat">
 				<h1>hats & bands</h1>
 			</div>
 			<div class="product-image-container">
@@ -101,10 +101,6 @@ get_header();
 		<?php
 			get_footer();
 		?>
-
-
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
 
 		</main><!-- .site-main -->
 	</section><!-- .content-area -->

@@ -547,6 +547,7 @@ header{
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 #seo-text-btn:hover{
@@ -1777,6 +1778,11 @@ header{
   margin-top: 3.57vw;
   margin-bottom: auto;
   display: inline-block;
+}
+
+
+#homepage_section_5_content p{
+  margin: 0;
 }
 
 @media (max-width:1200px) {
@@ -4249,6 +4255,11 @@ header{
   letter-spacing: 0.5px;
 }
 
+
+#contact_sub_2 form p {
+  margin: 0;
+}
+
 @media (max-width:1200px) {
   #contact_sub_2 p{
     font-size: 1.8vw;
@@ -4306,7 +4317,7 @@ header{
   font-family: bebasneue-bold;
   text-transform: uppercase;
   padding: 0.24em 0.37em 0.29em 0.28em;
-  margin-top: 4vw;
+  margin-top: 2vw;
   transform: scale(1,0.8);
   display: inline-block;
   text-decoration: none;

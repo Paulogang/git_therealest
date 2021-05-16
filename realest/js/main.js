@@ -6,6 +6,7 @@
     });
     
     $('#seo-text-btn').click(function() {
+       console.log('lol');
        $(this).toggleClass("open");
        $("#long-definition").toggleClass("open");
     
@@ -32,14 +33,6 @@
       $(this).addClass('selected');
       $('.snipcart-add-item').attr('data-item-custom3-value', colorclicked) ;
    });
-
-
-
-
-
-
-
-
 
     
    });
